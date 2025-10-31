@@ -43,58 +43,254 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <meta charset="UTF-8">
-  <title>Knowledge to Sight: Reasoning over Visual Attributes via Knowledge Decomposition for Abnormality Grounding</title>
+  <title>Smart IoT Pet Feeding System | Sejong University</title>
   <style>
+    /* Modern Dark Theme with Neon Accents */
+    body {
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background Particles */
+    body::before {
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 242, 96, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(5, 117, 230, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 0, 128, 0.05) 0%, transparent 50%);
+      animation: particleFloat 20s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes particleFloat {
+      0%, 100% { opacity: 0.3; transform: translateY(0px); }
+      50% { opacity: 0.6; transform: translateY(-20px); }
+    }
+
+    /* Hero Title with Glowing Effect */
     .publication-title {
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 3.5rem;
+      font-weight: 900;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
+      margin-bottom: 2rem;
     }
 
     .title-text {
-    background: linear-gradient(90deg, #00f260, #0575e6, #ff0080, #7928ca);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow:
-    2px 2px 4px rgba(0, 0, 0, 0.1),
-    4px 4px 8px rgba(0, 0, 0, 0.2);
-    animation: gradientShift 30s infinite ease-in-out;
-  }
+      background: linear-gradient(90deg, #00f260, #0575e6, #ff0080, #7928ca, #00f260);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 20px rgba(0, 242, 96, 0.5));
+      animation: gradientShift 8s ease infinite, glow 2s ease-in-out infinite;
+      letter-spacing: 2px;
+    }
 
     @keyframes gradientShift {
-      0% { background-position: 48% 50%; }
-      50% { background-position: 52% 50%; }
-      100% { background-position: 48% 50%; }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
+
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 242, 96, 0.3)); }
+      50% { filter: drop-shadow(0 0 25px rgba(5, 117, 230, 0.6)); }
+    }
+
+    /* Modern Button Styles */
     .publication-links .button {
-  background: linear-gradient(45deg, #00f260, #0575e6, #ff0080, #7928ca);
-  background-size: 300% 300%;
-  color: white !important;
-  font-weight: 600;
-  border: none;
-  transition: background-position 3s ease;
-  text-shadow: 0 0 px black;
-}
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white !important;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 0.8rem 2rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
 
-.publication-links .button:hover {
-  background-position: 100% 50%;
-  color: #fff !important;
-}
+    .publication-links .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s;
+    }
 
-.publication-links .button .icon i,
-.publication-links .button .icon img {
-  filter: drop-shadow(0 0 1px rgba(0,0,0,0.7));
-  vertical-align: middle;
-}
+    .publication-links .button:hover::before {
+      left: 100%;
+    }
 
-/* 让按钮间距更合理 */
-.publication-links .link-block {
-  margin: 0 0.3rem;
-}
+    .publication-links .button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
 
+    .publication-links .link-block {
+      margin: 0 0.5rem;
+    }
+
+    /* Section Styling with Glass Morphism */
+    .section {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 20px;
+      margin: 2rem auto;
+      padding: 3rem 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animated Section Titles */
+    .title.is-3 {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+      color: white !important;
+      padding: 20px !important;
+      border-radius: 15px !important;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4) !important;
+      text-align: center !important;
+      font-weight: 800 !important;
+      letter-spacing: 1px !important;
+      animation: titlePulse 3s ease-in-out infinite;
+      position: relative;
+    }
+
+    .title.is-3::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #00f260, transparent);
+      border-radius: 5px;
+    }
+
+    @keyframes titlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    /* Video Container with Neon Border */
+    video, img {
+      border-radius: 20px !important;
+      box-shadow: 
+        0 0 20px rgba(0, 242, 96, 0.3),
+        0 0 40px rgba(5, 117, 230, 0.2),
+        0 15px 50px rgba(0, 0, 0, 0.5) !important;
+      transition: all 0.4s ease;
+    }
+
+    video:hover, img:hover {
+      transform: scale(1.02);
+      box-shadow: 
+        0 0 30px rgba(0, 242, 96, 0.5),
+        0 0 60px rgba(5, 117, 230, 0.4),
+        0 20px 60px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    /* Team Member Links */
+    .author-block a {
+      color: #00f260 !important;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .author-block a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #00f260, #0575e6);
+      transition: width 0.3s ease;
+    }
+
+    .author-block a:hover {
+      color: #0575e6 !important;
+      text-shadow: 0 0 10px rgba(0, 242, 96, 0.5);
+    }
+
+    .author-block a:hover::after {
+      width: 100%;
+    }
+
+    /* Content Containers */
+    .content {
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+
+    .has-text-justified {
+      text-align: justify;
+      color: #c0c0c0;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background: rgba(15, 12, 41, 0.95);
+      color: #a0a0a0;
+      border-top: 2px solid rgba(0, 242, 96, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .footer a {
+      color: #00f260;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #0575e6;
+    }
+
+    /* Smooth Scroll Animation */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Loading Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* BibTeX Section */
+    pre {
+      background: rgba(0, 0, 0, 0.5) !important;
+      border-radius: 10px !important;
+      padding: 20px !important;
+      border-left: 4px solid #00f260 !important;
+      color: #00f260 !important;
+    }
   </style>
 </head>
 <body>
